@@ -9,8 +9,7 @@ class Publisher(models.Model):
 class Book(models.Model):
     title = models.CharField(max_length=200)
     in_print = models.BooleanField(default=True)
-    publisher = models.ForeignKey(
-        Publisher, on_delete=models.CASCADE)
+    publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
 
     def __str__(self):
             return self.title
